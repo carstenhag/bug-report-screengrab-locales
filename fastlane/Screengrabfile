@@ -1,0 +1,10 @@
+locales ['en-US', 'de-DE']
+ending_locale 'de-DE'
+clear_previous_screenshots true
+
+use_tests_in_packages = 'de.chagemann.screengrab_bugreport'
+
+tests_apk_path 'app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk'
+app_apk_path 'app/build/outputs/apk/debug/app-debug.apk'
+
+test_instrumentation_runner 'androidx.test.runner.AndroidJUnitRunner'
