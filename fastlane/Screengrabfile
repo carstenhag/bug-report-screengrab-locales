@@ -1,4 +1,4 @@
-locales ['en-US', 'de-DE']
+locales ['en-US', 'de-DE', 'es-ES']
 ending_locale 'de-DE'
 clear_previous_screenshots true
 

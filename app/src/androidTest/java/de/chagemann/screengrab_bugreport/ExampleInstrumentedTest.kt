@@ -1,5 +1,6 @@
 package de.chagemann.screengrab_bugreport
 
+import android.os.SystemClock
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
 import org.junit.Rule
@@ -24,6 +25,7 @@ class ExampleInstrumentedTest {
         activityRule.launchActivity(null)
         Screengrab.setDefaultScreenshotStrategy(UiAutomatorScreenshotStrategy())
 
-        Screengrab.screenshot("Screenshot Time!")
+        SystemClock.sleep(1000)
+        Screengrab.screenshot("Screenshot_Time")
     }
 }
