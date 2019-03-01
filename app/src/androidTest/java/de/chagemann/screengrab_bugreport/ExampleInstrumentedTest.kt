@@ -3,11 +3,13 @@ package de.chagemann.screengrab_bugreport
 import android.os.SystemClock
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
+import org.junit.ClassRule
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import tools.fastlane.screengrab.Screengrab
 import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
+import tools.fastlane.screengrab.locale.LocaleTestRule
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -16,6 +18,10 @@ import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
+    // JVMField needed!
+    @Rule @JvmField
+    val localeTestRule = LocaleTestRule()
 
     @get:Rule
     var activityRule = ActivityTestRule(MainActivity::class.java, false, false)
@@ -28,4 +34,5 @@ class ExampleInstrumentedTest {
         SystemClock.sleep(1000)
         Screengrab.screenshot("Screenshot_Time")
     }
+
 }
